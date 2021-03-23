@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>영서의 계산기</title>
+    </head>
+
+    <body>
+
+      <br>
+
+
+      <img src="image.jpg" width="30%">
+
+      <br>
+      <br>
+
+        숫자1:
+        <input type="number" id="n1">
+        숫자2:
+        <input type="number" id="n2"><br>
+        연산:
+        <input type="text" id="op"><br>
+        결과:
+        <input type="number" id="result">
+
+        <br>
+        <br>
+
+        <input type="button" value="계산" onclick="cal()">
+        <input type="button" value="삭제" onclick="reset()">
+
+
+
+    </body>
+
+<script>
+      function calulate(){
+
+                var n1 = document.getElementById("n1").value;
+                var n2 = document.getElementById("n2").value;
+                var op = document.getElementById("op").value;
+                var result;
+
+
+                if(op == "+"){
+                    result = n1+n2;
+                }else if(op == "-"){
+                    result = n1-n2;
+                }else if(op == "*"){
+                    result = n1*n2;
+                }else if(op == "/"){
+                    result = n1/n2;
+                }
+                document.getElementById("result").value = result;
+            }
+
+
+            function reset(){
+                document.getElementById("n1").value = "";
+                document.getElementById("n2").value = "";
+                document.getElementById("operation").value = "";
+                document.getElementById("result").value = "";
+            }
+
+        </script>
+
+
+
+
+</html>
